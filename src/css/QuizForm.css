@@ -1,0 +1,63 @@
+/* QuizForm.css */
+
+/* Styling the card for a colorful appearance */
+.quiz-form-card {
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #fbc2eb, #a18cd1); /* Gradient background */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the card content */
+.quiz-form-content {
+    padding: 24px;
+}
+
+/* Styling the title with a bold color */
+.quiz-form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3f51b5; /* Indigo color */
+    margin-bottom: 12px;
+}
+
+/* Adding styles to text fields */
+.quiz-form-input {
+    margin-top: 16px;
+    background-color: #ffffff; /* White background */
+    border-radius: 4px;
+}
+
+/* Styling the create button with vibrant colors */
+.quiz-form-button {
+    margin-top: 16px;
+    background-color: #ff4081; /* Pink color */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-form-button:hover {
+    background-color: #f50057; /* Darker pink on hover */
+}
+
+/* Styling the snackbar alert */
+.snackbar-alert {
+    background-color: #4caf50; /* Green for success messages */
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .quiz-form-card {
+        margin: 8px;
+    }
+
+    .quiz-form-content {
+        padding: 16px;
+    }
+
+    .quiz-form-title {
+        font-size: 1.2rem;
+    }
+}
