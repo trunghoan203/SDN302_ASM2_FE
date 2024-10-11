@@ -1,39 +1,36 @@
-/* Căn giữa toàn bộ container theo chiều dọc nhưng đẩy lên phía trên */
 .home-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Đẩy nội dung lên phía trên */
+    justify-content: flex-start; 
     min-height: 100vh;
     margin: 0 auto;
-    padding-top: 30px; /* Khoảng cách từ trên xuống, có thể điều chỉnh */
-    background-color: #ffefdb; /* Màu nền mới */
-    font-family: 'Verdana', sans-serif; /* Font chữ mới */
+    padding-top: 30px; 
+    background-color: #ffefdb; 
+    font-family: 'Verdana', sans-serif; 
 }
 
-/* Tiêu đề "Welcome to Simple Quiz" */
 .home-title {
     text-align: center;
-    font-size: 2.5rem; /* Tăng kích thước chữ */
+    font-size: 2.5rem; 
     margin-bottom: 1.5rem;
-    color: #8b4513; /* Màu chữ mới */
+    color: #8b4513; 
     font-weight: bold;
 }
 
-/* Các nút bấm, thêm khoảng cách và chiều rộng cố định */
 .home-button {
-    width: 230px; /* Tăng chiều rộng của nút bấm */
-    padding: 12px 18px; /* Thêm khoảng cách bên trong nút */
-    margin: 12px 0; /* Thêm khoảng cách giữa các nút */
-    background-color: #ff8c00; /* Màu nền của nút bấm mới */
-    color: #ffffff; /* Màu chữ trắng */
-    border: none; /* Xóa viền mặc định */
-    border-radius: 8px; /* Bo góc của nút bấm */
-    font-size: 1.2rem; /* Tăng kích thước chữ trong nút */
-    cursor: pointer; /* Con trỏ chuột chỉ vào nút bấm */
-    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+    margin-bottom: 1.5rem;
+    width: 230px; 
+    padding: 12px 18px;
+    background-color: #ff8c00; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 1.2rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 .home-button:hover {
-    background-color: #e67300; /* Màu nền khi hover */
+    background-color: #e67300; 
 }

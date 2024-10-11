@@ -10,11 +10,10 @@ const QuizPage = () => {
     const [showForm, setShowForm] = useState(false);
     const [selectedQuiz, setSelectedQuiz] = useState(null);
 
-    // Fetch quizzes
     useEffect(() => {
         const fetchQuizzes = async () => {
             try {
-                const response = await axios.get('https://sdn302-ews3.onrender.com/quizzes');
+                const response = await axios.get('https://sdn302-ac2y.onrender.com/quizzes');
                 setQuizzes(response.data);
             } catch (error) {
                 console.error('Error fetching quizzes:', error);
@@ -38,24 +37,25 @@ const QuizPage = () => {
     };
 
     return (
-        <Container sx={{ mt: 10 }}> {/* Thêm margin-top để đẩy nội dung xuống */}
-            <Typography variant="h4" align="center" gutterBottom>
-                Manage Quizzes
+        <Container sx={{ mt: 10 }}>
+            <Typography variant="h3" align="center" gutterBottom>
+                MANAGE QUIZZES
             </Typography>
-            <Button 
-                variant="contained" 
-                color="primary" 
+            <Button
+                className='question-button'
+                variant="contained"
+                color="primary"
                 onClick={() => setShowForm(!showForm)}
-                sx={{ display: 'block', margin: '0 auto', mb: 2 }} // Căn giữa nút
+                sx={{ display: 'block', margin: '0 auto', mb: 2 }}
             >
-                {showForm ? 'Cancel' : 'Create New Quiz'}
+                {showForm ? 'Cancel' : 'Create A New Quiz'}
             </Button>
 
             {showForm && <QuizForm onQuizAdded={handleQuizAdded} />}
-            <QuizList 
-                quizzes={quizzes} 
-                onQuizDeleted={handleQuizDeleted} 
-                onQuizSelect={handleQuizSelect} 
+            <QuizList
+                quizzes={quizzes}
+                onQuizDeleted={handleQuizDeleted}
+                onQuizSelect={handleQuizSelect}
             />
 
             {selectedQuiz && (

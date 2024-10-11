@@ -1,39 +1,33 @@
-/* QuestionForm.css */
 
-/* Container for the form */
 .question-form {
-    margin: 20px auto; /* Centering the form */
-    padding: 20px; /* Space inside the form */
-    max-width: 500px; /* Limit the width of the form */
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Soft gradient background */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    margin: 20px auto; 
+    padding: 20px; 
+    max-width: 500px; 
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Form field styling */
 .form-field {
-    margin-bottom: 16px; /* Space between form fields */
+    margin-bottom: 16px; 
 }
 
-/* TextField styling */
 .question-form .MuiTextField-root {
-    background-color: #ffffff; /* White background for input fields */
-    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; 
+    border-radius: 8px; 
 }
 
-/* Submit button styling */
 .question-form button {
-    background-color: #3f51b5; /* Indigo background */
-    color: #fff; /* White text color */
-    padding: 10px; /* Padding for button */
-    border: none; /* Removing button border */
-    border-radius: 8px; /* Rounded corners for button */
-    font-size: 1rem; /* Button font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition effect */
+    background-color: #3f51b5; 
+    color: #fff; 
+    padding: 10px; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
 }
 
-/* Hover effect for the submit button */
 .question-form button:hover {
-    background-color: #303f9f; /* Darker indigo color on hover */
+    background-color: #303f9f; 
 }

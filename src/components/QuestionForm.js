@@ -5,31 +5,31 @@ import '../css/QuestionForm.css';
 
 const QuestionForm = ({ onQuestionAdded }) => {
     const [text, setText] = useState('');
-    const [optionsString, setOptionsString] = useState(''); 
+    const [optionsString, setOptionsString] = useState('');
     const [correctAnswerIndex, setCorrectAnswerIndex] = useState(0);
     const [openSnackbar, setOpenSnackbar] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
-   
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const options = optionsString.split(',').map(option => option.trim()); 
+        const options = optionsString.split(',').map(option => option.trim());
 
         try {
-            const response = await axios.post('https://sdn302-ews3.onrender.com/questions', {
+            const response = await axios.post('https://sdn302-ac2y.onrender.com/questions', {
                 text,
                 options,
                 correctAnswerIndex,
             });
-            onQuestionAdded(response.data); 
-            setSnackbarMessage('Question added successfully!');
+            onQuestionAdded(response.data);
+            setSnackbarMessage('Add Question successfully!');
             setOpenSnackbar(true);
             // Reset form
             setText('');
-            setOptionsString(''); 
+            setOptionsString('');
             setCorrectAnswerIndex(0);
         } catch (error) {
             console.error('Error adding question:', error);
-            setSnackbarMessage('Failed to add question.');
+            setSnackbarMessage('Add Question Failed!!!');
             setOpenSnackbar(true);
         }
     };

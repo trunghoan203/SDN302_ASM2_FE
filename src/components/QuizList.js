@@ -1,13 +1,13 @@
 import React from 'react';
 import { List, ListItem, ListItemText, Button } from '@mui/material';
 import axios from 'axios';
-import '../css/QuizList.css'; // Import the CSS file
+import '../css/QuizList.css';
 
 const QuizList = ({ quizzes, onQuizDeleted, onQuizSelect }) => {
     const handleDelete = async (quizId) => {
         try {
-            await axios.delete(`https://sdn302-ews3.onrender.com/quizzes/${quizId}`);
-            onQuizDeleted(quizId); // Notify parent component of the deleted quiz
+            await axios.delete(`https://sdn302-ac2y.onrender.com/quizzes/${quizId}`);
+            onQuizDeleted(quizId);
         } catch (error) {
             console.error('Error deleting quiz:', error);
         }

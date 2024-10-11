@@ -1,56 +1,48 @@
-/* QuizList.css */
-
-/* Container for the entire list */
 .quiz-list-container {
     margin: 20px;
     padding: 16px;
-    background: linear-gradient(135deg, #e0c3fc, #8ec5fc); /* Gradient background for container */
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc); 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Heading of the quiz list */
 .quiz-list-heading {
     font-size: 1.8rem;
-    color: #3f51b5; /* Indigo color */
+    color: #3f51b5; 
     margin-bottom: 20px;
     text-align: center;
 }
 
-/* Styling individual quiz list items */
 .quiz-list-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px; /* Padding inside each item */
-    margin: 12px 0; /* Space between each quiz */
-    border: 2px solid #ccc; /* Border for list items */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #ffffff; /* White background */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+    padding: 12px; 
+    margin: 12px 0; 
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #ffffff; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
-/* Hover effect for quiz list items */
 .quiz-list-item:hover {
-    background-color: #f1f1f1; /* Light grey background on hover */
-    transform: translateY(-2px); /* Slight upward movement on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    background-color: #f1f1f1;
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
 }
 
-/* Styling the delete button */
 .quiz-list-button {
-    color: #ff5722; /* Bright orange color */
-    border: 1px solid #ff5722; /* Orange border */
-    background-color: transparent; /* Transparent background */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+    color: #ff5722; 
+    border: 1px solid #ff5722; 
+    background-color: transparent; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .quiz-list-button:hover {
-    background-color: #ff5722; /* Orange background on hover */
-    color: white; /* White text on hover */
+    background-color: #ff5722; 
+    color: white; 
 }
 
-/* Responsive styles */
 @media (max-width: 600px) {
     .quiz-list-container {
         margin: 10px;

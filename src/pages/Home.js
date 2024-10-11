@@ -9,29 +9,26 @@ const Home = () => {
   return (
     <Container>
       <Box className="home-container">
-        {/* Title centered */}
-        <Typography variant="h4" className="home-title">
-          Welcome to Simple Quiz
+        <Typography variant="h3" className="home-title">
+          WELCOME TO HAPPY QUIZ!!!
         </Typography>
 
-        {/* Button to navigate to the Quiz Page */}
         <Button 
           variant="contained" 
           color="primary" 
           onClick={() => navigate('/quizzes')}
-          className="home-button"  // Apply CSS class
+          className="home-button" 
         >
-          Go to Quizzes
+          Manage Quizzes
         </Button>
 
-        {/* Button to navigate to the Question Page */}
         <Button 
           variant="contained" 
           color="secondary" 
           onClick={() => navigate('/questions')}
-          className="home-button"  // Apply CSS class
+          className="home-button" 
         >
-          Go to Questions
+          Manage Questions
         </Button>
       </Box>
     </Container>

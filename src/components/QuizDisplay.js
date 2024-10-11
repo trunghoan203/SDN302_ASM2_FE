@@ -3,22 +3,19 @@ import { Box, Typography, Button, TextField } from '@mui/material';
 import axios from 'axios';
 
 const QuizDisplay = ({ quiz, onQuizUpdated, onDelete }) => {
-    const [isEditing, setIsEditing] = useState(false); // Quản lý trạng thái edit
-    const [title, setTitle] = useState(quiz.title); // State lưu trữ title của quiz
-    const [description, setDescription] = useState(quiz.description); // State lưu trữ description của quiz
+    const [isEditing, setIsEditing] = useState(false);
+    const [title, setTitle] = useState(quiz.title);
+    const [description, setDescription] = useState(quiz.description);
 
-    // Hàm xử lý khi người dùng muốn cập nhật quiz
     const handleUpdate = async () => {
         try {
-            const updatedQuiz = { title, description }; // Chỉ gửi title và description
+            const updatedQuiz = { title, description };
 
-            // Gửi yêu cầu PUT tới backend để cập nhật quiz
-            const response = await axios.put(`https://sdn302-ews3.onrender.com/quizzes/${quiz._id}`, updatedQuiz);
+            const response = await axios.put(`https://sdn302-ac2y.onrender.com/quizzes/${quiz._id}`, updatedQuiz);
 
-            // Gọi hàm onQuizUpdated để cập nhật danh sách quizzes ở component cha
             onQuizUpdated(response.data);
 
-            setIsEditing(false); // Tắt chế độ edit sau khi cập nhật thành công
+            setIsEditing(false);
         } catch (error) {
             console.error('Error updating quiz:', error);
         }

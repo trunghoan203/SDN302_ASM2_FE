@@ -10,14 +10,14 @@ const QuestionList = ({ questions, onQuestionDeleted, onQuestionSelect }) => {
 
     const handleDelete = async (questionId) => {
         try {
-            await axios.delete(`https://sdn302-ews3.onrender.com/questions/${questionId}`);
+            await axios.delete(`https://sdn302-ac2y.onrender.com/questions/${questionId}`);
             onQuestionDeleted(questionId);
-            setSnackbarMessage('Question deleted successfully!');
+            setSnackbarMessage('Delete Question successfully!');
             setSnackbarSeverity('success');
             setOpenSnackbar(true);
         } catch (error) {
             console.error('Error deleting question:', error);
-            setSnackbarMessage('Failed to delete question.');
+            setSnackbarMessage('Delete Question Failed!!!');
             setSnackbarSeverity('error');
             setOpenSnackbar(true);
         }
@@ -32,8 +32,8 @@ const QuestionList = ({ questions, onQuestionDeleted, onQuestionSelect }) => {
             <h2 className="question-list-heading">Question List</h2>
             <List>
                 {questions.map((question) => (
-                    <ListItem 
-                        key={question._id} 
+                    <ListItem
+                        key={question._id}
                         className="question-list-item"
                     >
                         <ListItemText
@@ -41,8 +41,8 @@ const QuestionList = ({ questions, onQuestionDeleted, onQuestionSelect }) => {
                             onClick={() => onQuestionSelect(question)}
                             className="question-text"
                         />
-                        <Button 
-                            onClick={() => handleDelete(question._id)} 
+                        <Button
+                            onClick={() => handleDelete(question._id)}
                             className="delete-button"
                         >
                             Delete

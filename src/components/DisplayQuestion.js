@@ -8,11 +8,10 @@ const DisplayQuestion = ({ question, onUpdateQuestion }) => {
         text: '',
         options: [],
         correctAnswerIndex: 0,
-        _id: '', // Ensure you have an ID field for updates
+        _id: '',
     });
     const [error, setError] = useState('');
 
-    // Effect to update editedQuestion when the question prop changes
     useEffect(() => {
         if (question) {
             setEditedQuestion(question);
@@ -26,16 +25,16 @@ const DisplayQuestion = ({ question, onUpdateQuestion }) => {
 
     const handleUpdate = async () => {
         try {
-            const response = await axios.put(`https://sdn-asm2-hfmt.onrender.com/questions/${editedQuestion._id}`, {
+            const response = await axios.put(`https://sdn302-ac2y.onrender.com/questions/${editedQuestion._id}`, {
                 text: editedQuestion.text,
                 options: editedQuestion.options,
                 correctAnswerIndex: editedQuestion.correctAnswerIndex
             });
 
-            onUpdateQuestion(response.data); 
+            onUpdateQuestion(response.data);
             setEditing(false);
         } catch (error) {
-            setError('Failed to update the question. Please try again.');
+            setError('Update Fail! Please try again!!!');
             console.error(error);
         }
     };
