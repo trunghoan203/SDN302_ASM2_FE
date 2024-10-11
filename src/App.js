@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { Container, Box, Typography } from '@mui/material';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Container, Box } from '@mui/material';
 import Home from './pages/Home';
 import QuestionPage from './pages/QuestionPage';
 import QuizPage from './pages/QuizPage';
