@@ -12,12 +12,12 @@ const QuestionList = ({ questions, onQuestionDeleted, onQuestionSelect }) => {
         try {
             await axios.delete(`https://sdn302-ews3.onrender.com/questions/${questionId}`);
             onQuestionDeleted(questionId);
-            setSnackbarMessage('Question deleted successfully!');
+            setSnackbarMessage('Delete Question successfully!');
             setSnackbarSeverity('success');
             setOpenSnackbar(true);
         } catch (error) {
             console.error('Error deleting question:', error);
-            setSnackbarMessage('Failed to delete question.');
+            setSnackbarMessage('Delete Question Failed!!!');
             setSnackbarSeverity('error');
             setOpenSnackbar(true);
         }

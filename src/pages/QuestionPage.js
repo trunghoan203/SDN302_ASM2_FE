@@ -11,7 +11,6 @@ const QuestionPage = () => {
     const [isFormVisible, setFormVisible] = useState(false);
     const [selectedQuestion, setSelectedQuestion] = useState(null);
 
-    // Fetch all questions
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
@@ -39,17 +38,18 @@ const QuestionPage = () => {
     };
 
     return (
-        <Container sx={{ mt: 10 }}> {/* Thêm margin-top để đẩy nội dung xuống */}
-            <Typography variant="h4" align="center" gutterBottom>
-                Manage Questions
+        <Container sx={{ mt: 10 }}>
+            <Typography variant="h3" align="center" gutterBottom>
+                MANAGE QUESTIONS
             </Typography>
             <Button 
+                className='quiz-button'
                 variant="contained" 
                 color="primary" 
                 onClick={() => setFormVisible(!isFormVisible)}
-                sx={{ display: 'block', margin: '0 auto', mb: 2 }} // Căn giữa nút
+                sx={{ display: 'block', margin: '0 auto', mb: 2 }}
             >
-                {isFormVisible ? 'Cancel' : 'Create New Question'}
+                {isFormVisible ? 'Cancel' : 'Create A New Question'}
             </Button>
 
             {isFormVisible && <QuestionForm onQuestionAdded={handleQuestionAdded} />}

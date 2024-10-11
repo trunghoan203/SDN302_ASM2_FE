@@ -21,7 +21,7 @@ const QuestionForm = ({ onQuestionAdded }) => {
                 correctAnswerIndex,
             });
             onQuestionAdded(response.data); 
-            setSnackbarMessage('Question added successfully!');
+            setSnackbarMessage('Add Question successfully!');
             setOpenSnackbar(true);
             // Reset form
             setText('');
@@ -29,7 +29,7 @@ const QuestionForm = ({ onQuestionAdded }) => {
             setCorrectAnswerIndex(0);
         } catch (error) {
             console.error('Error adding question:', error);
-            setSnackbarMessage('Failed to add question.');
+            setSnackbarMessage('Add Question Failed!!!');
             setOpenSnackbar(true);
         }
     };

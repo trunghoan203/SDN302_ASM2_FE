@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Button, TextField, Snackbar, Alert, Card, CardContent, Typography } from '@mui/material';
-import '../css/QuizForm.css'; // Import the CSS file
+import '../css/QuizForm.css'; 
 
 const QuizForm = ({ onQuizAdded }) => {
     const [title, setTitle] = useState('');
@@ -16,15 +16,15 @@ const QuizForm = ({ onQuizAdded }) => {
                 title,
                 description,
             });
-            onQuizAdded(response.data); // Notify parent component of the new quiz
-            setSnackbarMessage('Quiz added successfully!');
+            onQuizAdded(response.data); 
+            setSnackbarMessage('Add Quiz Successfully!');
             setOpenSnackbar(true);
-            // Reset form
+       
             setTitle('');
             setDescription('');
         } catch (error) {
             console.error('Error adding quiz:', error);
-            setSnackbarMessage('Failed to add quiz.');
+            setSnackbarMessage('Add Quiz Failure!!!');
             setOpenSnackbar(true);
         }
     };
@@ -36,7 +36,7 @@ const QuizForm = ({ onQuizAdded }) => {
     return (
         <Card variant="outlined" className="quiz-form-card">
             <CardContent className="quiz-form-content">
-                <Typography variant="h6" gutterBottom className="quiz-form-title">
+                <Typography variant="h6" align="center" gutterBottom className="quiz-form-title">
                     Create Quiz
                 </Typography>
                 <form onSubmit={handleSubmit}>
@@ -65,6 +65,7 @@ const QuizForm = ({ onQuizAdded }) => {
                         variant="contained"
                         color="primary"
                         className="quiz-form-button"
+                        sx={{ display: 'block', margin: '0 auto'}}
                     >
                         Create
                     </Button>
