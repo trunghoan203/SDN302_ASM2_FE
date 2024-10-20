@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Button, Typography, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import '../css/Main.css'; 
+import '../css/Main.css';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -13,20 +13,20 @@ const Home = () => {
           WELCOME TO HAPPY QUIZ!!!
         </Typography>
 
-        <Button 
-          variant="contained" 
-          color="primary" 
+        <Button
+          variant="contained"
+          color="primary"
           onClick={() => navigate('/quizzes')}
-          className="home-button" 
+          className="home-button"
         >
           Manage Quizzes
         </Button>
 
-        <Button 
-          variant="contained" 
-          color="secondary" 
+        <Button
+          variant="contained"
+          color="secondary"
           onClick={() => navigate('/questions')}
-          className="home-button" 
+          className="home-button"
         >
           Manage Questions
         </Button>
